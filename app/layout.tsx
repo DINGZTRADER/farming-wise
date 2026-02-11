@@ -6,8 +6,8 @@ import { Sidebar } from "@/components/Sidebar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    title: "FarmOS | Inventory Management",
-    description: "AI-Driven Farm Inventory System for Uganda",
+    title: "Inventory | Management System",
+    description: "AI-Driven Inventory System for Uganda",
 };
 
 export default function RootLayout({

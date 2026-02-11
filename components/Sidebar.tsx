@@ -17,9 +17,8 @@ export function Sidebar() {
 
     return (
         <div className="flex h-full w-64 flex-col border-r border-slate-800 bg-slate-950 text-white shadow-2xl">
-            <div className="flex items-center gap-2 p-8 border-b border-slate-800/50">
-                <Sprout className="h-8 w-8 text-emerald-500" />
-                <span className="text-2xl font-bold tracking-tight text-white">FarmOS</span>
+            <div className="flex items-center justify-center p-6 border-b border-slate-800/50">
+                <img src="/logo.png" alt="Logo" className="h-12 w-auto object-contain" />
             </div>
             <nav className="flex-1 space-y-2 px-4 py-8">
                 {links.map((link) => {

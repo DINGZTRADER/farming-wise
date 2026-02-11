@@ -17,7 +17,7 @@ export default async function Home() {
             <div className="flex items-center justify-between">
                 <div>
                     <h1 className="text-3xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-500 mb-1">
-                        Farm Dashboard
+                        Inventory Dashboard
                     </h1>
                     <p className="text-slate-400 text-sm">Real-time overview of inventory and alerts.</p>
                 </div>
