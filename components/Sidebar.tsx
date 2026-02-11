@@ -17,8 +17,13 @@ export function Sidebar() {
 
     return (
         <div className="flex h-full w-64 flex-col border-r border-slate-800 bg-slate-950 text-white shadow-2xl">
-            <div className="flex items-center justify-center p-6 border-b border-slate-800/50">
-                <img src="/logo.png" alt="Logo" className="h-12 w-auto object-contain" />
+            <div className="relative flex items-center justify-center p-6 border-b border-slate-800/50 group">
+                <div className="absolute inset-0 bg-emerald-500/10 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <img
+                    src="/logo.png"
+                    alt="Logo"
+                    className="relative h-12 w-auto object-contain filter invert mix-blend-screen drop-shadow-[0_0_10px_rgba(52,211,153,0.4)] opacity-90 group-hover:drop-shadow-[0_0_15px_rgba(52,211,153,0.6)] transition-all duration-300"
+                />
             </div>
             <nav className="flex-1 space-y-2 px-4 py-8">
                 {links.map((link) => {
