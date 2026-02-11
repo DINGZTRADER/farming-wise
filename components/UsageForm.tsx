@@ -37,11 +37,11 @@ export function UsageForm({ products, batches }: Props) {
 
     // Filter batches for selected product
     const activeBatches = batches.filter(b => b.product_id === selectedProductId)
-    const selectedBatch = activeBatches.find(b => b.batch_id === selectedBatchId)
+    const selectedBatch = activeBatches.find(b => b.id === selectedBatchId)
 
     // Auto-select batch if only one exists
     if (selectedProductId && activeBatches.length === 1 && !selectedBatchId) {
-        setSelectedBatchId(activeBatches[0].batch_id)
+        setSelectedBatchId(activeBatches[0].id)
     }
 
     return (
@@ -78,13 +78,13 @@ export function UsageForm({ products, batches }: Props) {
                                     </div>
                                 ) : (
                                     activeBatches.map(batch => (
-                                        <label key={batch.batch_id} className={`flex items-start gap-3 p-3 rounded-lg border cursor-pointer transition-all ${selectedBatchId === batch.batch_id ? 'border-rose-500 bg-rose-500/10' : 'border-slate-700 hover:bg-slate-800'}`}>
+                                        <label key={batch.id} className={`flex items-start gap-3 p-3 rounded-lg border cursor-pointer transition-all ${selectedBatchId === batch.id ? 'border-rose-500 bg-rose-500/10' : 'border-slate-700 hover:bg-slate-800'}`}>
                                             <input
                                                 type="radio"
                                                 name="batch_id"
-                                                value={batch.batch_id}
-                                                checked={selectedBatchId === batch.batch_id}
-                                                onChange={() => setSelectedBatchId(batch.batch_id)}
+                                                value={batch.id}
+                                                checked={selectedBatchId === batch.id}
+                                                onChange={() => setSelectedBatchId(batch.id)}
                                                 className="mt-1 text-rose-600 focus:ring-rose-500 bg-slate-900 border-slate-600"
                                             />
                                             <div className="flex-1 text-sm">
