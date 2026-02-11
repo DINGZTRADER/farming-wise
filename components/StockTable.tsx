@@ -86,7 +86,7 @@ export function StockTable({ stock }: { stock: CurrentStock[] }) {
                                     </span>
                                 </td>
                                 <td className="whitespace-nowrap px-6 py-4 text-right font-medium text-slate-200">
-                                    {item.quantity_on_hand} <span className="text-xs text-slate-500 font-normal">{item.unit}</span>
+                                    {formatNumber(item.quantity_on_hand)} <span className="text-xs text-slate-500 font-normal">{item.unit}</span>
                                 </td>
                                 <td className="whitespace-nowrap px-6 py-4 text-right text-slate-500">
                                     {item.reorder_threshold}
