@@ -1,7 +1,7 @@
 'use client'
 
 import { CurrentStock } from '@/types/inventory'
-import { formatNum } from '@/lib/utils'
+import { formatNumber } from '@/lib/utils'
 import { parseISO, differenceInDays, format } from 'date-fns'
 import { AlertCircle, CheckCircle, Package, AlertTriangle } from 'lucide-react'
 
