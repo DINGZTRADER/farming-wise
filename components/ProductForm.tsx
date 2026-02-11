@@ -35,7 +35,7 @@ interface ProductFormProps {
 
 export function ProductForm({ categories, suppliers }: ProductFormProps) {
     return (
-        <form action={createProduct} className="grid gap-6 rounded-xl border border-slate-800 bg-slate-900/50 p-6 shadow-xl backdrop-blur-sm">
+        <form action={async (formData) => { await createProduct(formData) }} className="grid gap-6 rounded-xl border border-slate-800 bg-slate-900/50 p-6 shadow-xl backdrop-blur-sm">
             <div className="grid gap-4 md:grid-cols-2">
                 <div className="space-y-2">
                     <label htmlFor="name" className="text-sm font-medium text-slate-300">

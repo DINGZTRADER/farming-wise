@@ -29,7 +29,7 @@ interface Props {
 
 export function AddStockForm({ products }: Props) {
     return (
-        <form action={addStock} className="grid gap-6 rounded-xl border border-slate-800 bg-slate-900/50 p-6 shadow-xl backdrop-blur-sm">
+        <form action={async (formData) => { await addStock(formData) }} className="grid gap-6 rounded-xl border border-slate-800 bg-slate-900/50 p-6 shadow-xl backdrop-blur-sm">
             <div className="space-y-4">
                 <div>
                     <label className="block text-sm font-medium text-slate-300 mb-1">Select Product</label>
